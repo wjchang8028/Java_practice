@@ -21,6 +21,7 @@ public class map {
 		
 		Iterator<String> keys = map.keySet().iterator();
 		
+		//iterator »ç¿ë¹ý
 		while (keys.hasNext()) {
 			String key = keys.next();
 			System.out.println(key+" "+map.get(key));
