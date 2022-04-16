@@ -1,6 +1,6 @@
 package collections;
 
-public class classPractice {
+public class classPractice extends exclass{
 	void instancemethod() {
 		System.out.println("인스턴스 메소드 실행");
 	}
@@ -14,6 +14,15 @@ public class classPractice {
 		// TODO Auto-generated method stub
 		classmethod();
 		//instancemethod(); 클래스 메소드가 아니므로 오류
+		
+		b += 100;
+		System.out.println(b);
+		
+		//a += 10; 다른 클래스의 int 인스턴스형태이므로 호출불가
+		exclass ex = new exclass();
+		ex.a += 10;
+		System.out.println(ex.a);
+		
 		
 
 	}
