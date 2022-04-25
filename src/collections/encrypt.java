@@ -18,7 +18,7 @@ public class encrypt {
 				hexString.append(hex);
 			}
 
-			// ���
+			// 출력
 			return hexString.toString();
 
 		} catch (Exception ex) {
@@ -26,7 +26,7 @@ public class encrypt {
 		}
 	}
 
-	public static String makeToken(String birth, String name, String password) {
+	public static String makeToken(String birth, String name, String password) { //해시 토큰 생성
 		String token = new StringBuffer(birth).append(name).append(password).toString();
 
 		String encryptToken = encryptToken(token);
@@ -36,7 +36,7 @@ public class encrypt {
 
 	public static void main(String[] args) {
 		String birth = "19901230";
-		String name = "���缮";
+		String name = "유재석";
 		String password = "dbwoTjr123";
 
 		String UID = makeToken(birth, name, password);
