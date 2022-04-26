@@ -1,8 +1,27 @@
 package collections;
 
 import java.security.MessageDigest;
+import java.security.SecureRandom;
 
 public class encrypt {
+	public static String Byte_To_String(byte[] byteArr) {
+		StringBuilder sb = new StringBuilder();
+
+		for (byte a : byteArr) {
+			sb.append(String.format("%02x", a)); // 02x hex코드포맷
+		}
+		return sb.toString();
+	}
+
+	public static String makeSalt() throws Exception {
+		int codeLen = 15; // 임의의 hex코드의 길이
+
+		SecureRandom sr = new SecureRandom();
+		byte[] srCode = new byte[codeLen];
+		sr.nextBytes(srCode);
+
+		return Byte_To_String(srCode);
+	}
 
 	public static String encryptToken(String pwd) {
 		try {
@@ -26,7 +45,7 @@ public class encrypt {
 		}
 	}
 
-	public static String makeToken(String birth, String name, String password) { //해시 토큰 생성
+	public static String makeToken(String birth, String name, String password) { // 해시 토큰 생성
 		String token = new StringBuffer(birth).append(name).append(password).toString();
 
 		String encryptToken = encryptToken(token);
@@ -41,6 +60,13 @@ public class encrypt {
 
 		String UID = makeToken(birth, name, password);
 		System.out.println(UID);
+
+		try {
+			String salt = makeSalt();
+			System.out.println(salt);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 
 	}
 
