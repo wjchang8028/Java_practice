@@ -13,6 +13,7 @@ public class collections {
 		list.add(20);
 		list.add(50);
 		list.add(30);
+		System.out.println();
 		
 		System.out.println(list);
 		
