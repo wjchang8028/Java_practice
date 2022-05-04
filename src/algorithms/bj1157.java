@@ -1,6 +1,5 @@
 package algorithms;
 
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.Scanner;
 
@@ -23,8 +22,6 @@ public class bj1157 {
 		}
 		System.out.println(map);
 
-		int num = Collections.max(map.values());
-		
 
 	}
 
