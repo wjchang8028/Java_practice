@@ -18,7 +18,7 @@ public class bj2675 {
 					answer += str.charAt(k);
 				}
 			}
-
+//
 			System.out.println(answer);
 		}
 
