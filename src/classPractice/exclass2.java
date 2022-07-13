@@ -2,9 +2,10 @@ package classPractice;
 
 class animal {
 	public static void main(String[] args) {
-		System.out.println("µ¿¹°?");
+		System.out.println("ÂµÂ¿Â¹Â°?");
 	}
 }
+
 
 public class exclass2 {
 
